@@ -1,0 +1,29 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: incident-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/codepulse_incident
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
+notification-service:
+  base-url: http://localhost:8084
+
+rest-client:
+  connect-timeout: 5000
+  read-timeout: 30000
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html

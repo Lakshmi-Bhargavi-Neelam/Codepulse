@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: api-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/codepulse
+    username: postgres
+    password: bhargavi@8
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+    properties:
+      hibernate:
+        format_sql: true
+
+    show-sql: true
+
+  sql:
+    init:
+      mode: never

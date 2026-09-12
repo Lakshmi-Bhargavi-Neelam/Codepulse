@@ -1,0 +1,29 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: worker-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/codepulse_worker
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
+incident-service:
+  base-url: http://localhost:8083
+
+rest-client:
+  connect-timeout: 5000
+  read-timeout: 30000
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
